@@ -1,0 +1,94 @@
+.container{
+    position: relative;
+    z-index: 0;
+    background-color: rgba(255, 255, 0, 0.341);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    border: 2px solid red;
+    width: 625px;
+    height: 625px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+body{
+    background-color: rgb(198 182 241);
+}
+.container > div{
+
+    cursor: pointer;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(101, 101, 191);
+}
+div img{
+    /* display: none; */
+    width: 100%;
+}
+
+.btns{ 
+    height: 100px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+    display: flex;
+    width: 625px;
+    margin: auto;
+}
+
+
+button{
+    border-radius: 10px;
+    font: bold;
+    font-weight: 700;
+    height: 50%;
+    margin: auto;
+    width: 50%;
+}
+ @media only screen and (max-width: 600px) {
+  .container{
+    height: 90vh;
+    
+  }
+  .container > div{
+    cursor: pointer;
+    border: 2px solid black;
+    height: 280px;
+    /* width: 200px; */
+   
+}
+}
+footer{
+    margin: auto;
+    text-align: center ;
+    position: fixed;
+    bottom: 0px;
+}
+
+
+#winlines
+
+{
+    margin-left: 4px;
+    
+    transform-origin: left;
+    transform: scaleX(0);
+    position: absolute;
+
+
+    /* width: 100px; */
+    height: 8px;
+    background-color: crimson;
+    transition: transform 0.5s ease;
+    border-radius:5%;
+    border: 0cap;
+    z-index: 1000;
+    top: 20%;
+    /* height: 100px; */
+}
+.container > div img{
+    position: relative;
+    z-index: 0;
+}
