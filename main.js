@@ -86,7 +86,7 @@ function checkwin() {
       
       return;
     }
-    else{
+    else{     // if no one win
       alert("no one win");
       reset();
       winlinereset();
