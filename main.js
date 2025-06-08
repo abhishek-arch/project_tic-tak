@@ -7,9 +7,10 @@ let value = true;
 let array = Array.from(document.body.firstElementChild.children);
 array.forEach((element) => {
   element.addEventListener("click", (e) => {
-      let img_tag = e.currentTarget.querySelector("img");
-       let src = img_tag.getAttribute("src");
-    if(src ===null  ||src.trim()==='') {
+   
+  
+  
+  
     if (value == true) {
       if (e.currentTarget.querySelector("img")) {
         e.currentTarget.querySelector("img").src = img.img1;
@@ -21,9 +22,6 @@ array.forEach((element) => {
       e.currentTarget.querySelector("img").src = img.img2;
       value = !value;
     }
-} else {
-          alert("please click another box");
-}
 
 });
 });
@@ -86,13 +84,27 @@ function checkwin() {
       
       return;
     }
-    else{     // if no one win
-      alert("no one win");
+   
+    
+
+  // Check if every cell is filled (src is NOT "#" or empty)
+  
+
+  
+  }
+  const imgs = Array.from(document.querySelectorAll("img"));
+  const allFilled = imgs.every(img => {
+    let src = img.getAttribute("src");
+    return src !== null && src.trim() !== "" && src !== "#";
+  });
+if (allFilled) {
+    setTimeout(() => {
+      alert("It's a draw! 🤝");
       reset();
       winlinereset();
-      return;
-    }
+    }, 500);
   }
+  
 }
 function reset() {
   Array.from(document.getElementsByTagName("img")).forEach((e) => {
