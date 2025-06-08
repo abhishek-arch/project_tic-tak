@@ -2,16 +2,13 @@ let img = {
   img1: "close.png",
   img2: "zero.png",
 };
+console.log(img);
 let value = true;
-console.log("hello");
 let array = Array.from(document.body.firstElementChild.children);
 array.forEach((element) => {
   element.addEventListener("click", (e) => {
-    console.log(e.currentTarget)
       let img_tag = e.currentTarget.querySelector("img");
-      console.log(img_tag);
        let src = img_tag.getAttribute("src");
-       console.log(src);
     if(src ===null  ||src.trim()==='') {
     if (value == true) {
       if (e.currentTarget.querySelector("img")) {
