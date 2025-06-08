@@ -86,6 +86,12 @@ function checkwin() {
       
       return;
     }
+    else{
+      alert("no one win");
+      reset();
+      winlinereset();
+      return;
+    }
   }
 }
 function reset() {
