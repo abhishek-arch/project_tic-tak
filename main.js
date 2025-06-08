@@ -3,10 +3,16 @@ let img = {
   img2: "zero.png",
 };
 let value = true;
-
+console.log("hello");
 let array = Array.from(document.body.firstElementChild.children);
 array.forEach((element) => {
   element.addEventListener("click", (e) => {
+    console.log(e.currentTarget)
+      let img_tag = e.currentTarget.querySelector("img");
+      console.log(img_tag);
+       let src = img_tag.getAttribute("src");
+       console.log(src);
+    if(src ===null  ||src.trim()==='') {
     if (value == true) {
       if (e.currentTarget.querySelector("img")) {
         e.currentTarget.querySelector("img").src = img.img1;
@@ -18,7 +24,11 @@ array.forEach((element) => {
       e.currentTarget.querySelector("img").src = img.img2;
       value = !value;
     }
-  });
+} else {
+          alert("please click another box");
+}
+
+});
 });
 
 document.querySelector("button").addEventListener("click", () => {
